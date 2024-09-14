@@ -25,4 +25,15 @@ class Animal {
     public function falar(){
         echo "Ainda não sei nenhum barulho, sou uma superclasse\n";
     }
+
+    public function ordenarCompra(Produto $produto, $quantidade) {
+        $total = $produto->preco * $quantidade;
+        echo "Produto: $produto->nome || Quantidade: $quantidade | Total: R$ " . number_format($total, 2, ',', '.') . "\n";
+    }
+
+    public function __toString() {
+        return "ID: $this->id, Nome: $this->nome, Humano: $this->humano, Raça: $this->raca, Patas: $this->quantidadePatas, Cor: $this->cor, Peso: $this->peso kg, Tamanho: $this->tamanho cm";
+    }
+
+
 }

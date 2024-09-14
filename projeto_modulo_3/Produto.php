@@ -13,5 +13,9 @@ class Produto{
         $this->preco = $preco;
     }
 
+    public static function cadastrarProduto($id, $nome, $preco) {
+        $novoProduto = new Produto($id, $nome, $preco);
+        return $novoProduto;
+    }
     
 }

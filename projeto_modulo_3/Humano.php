@@ -16,5 +16,13 @@ class Humano {
         $this->contato = $contato;
     }
 
+    public function falar(){
+        echo "Oi, eu sou um humano\n";
+    }
 
+    public function __toString() {
+        return "ID: $this->id, Nome: $this->nome, Idade: $this->idade, Endereço: $this->endereco, Contato: $this->contato";
+    }
+
+    
 }
